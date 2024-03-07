@@ -19,14 +19,12 @@ const UpdateKepsekripangAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .put("http://localhost:8001/UpdateKepsekripangAdmin/" + id, values)
+    axios.put("http://localhost:8001/UpdateKepsekripangAdmin/" + id, values)
       .then((res) => navigate("/KepsekAdm", res))
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordKepsekripangAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordKepsekripangAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

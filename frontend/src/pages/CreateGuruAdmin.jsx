@@ -32,8 +32,7 @@ const CreateGuruAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:8001/CreateGuruAdmin", values)
+    axios.post("http://localhost:8001/CreateGuruAdmin", values)
       .then((res) => navigate("/GuruAdm", res))
       .catch((err) => console.log(err));
   };

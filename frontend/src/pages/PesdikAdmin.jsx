@@ -12,15 +12,13 @@ import { AddIcon, DeleteIcon, EditIcon } from "@chakra-ui/icons";
 const PesdikAdmin = () => {
   const [pesdiks, setPesdiks] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Pesdik")
+    axios.get("http://localhost:8001/Pesdik")
       .then((res) => setPesdiks(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = (id) => {
-    axios
-      .delete("http://localhost:8001/DeletePesdikAdmin/" + id)
+    axios.delete("http://localhost:8001/DeletePesdikAdmin/" + id)
       .then((res) => window.location.reload(res))
       .catch((err) => console.log(err));
   };

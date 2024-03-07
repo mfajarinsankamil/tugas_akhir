@@ -20,15 +20,13 @@ import { AddIcon, DeleteIcon, EditIcon } from "@chakra-ui/icons";
 const InformasiAdmin = () => {
   const [informations, setInformations] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Informations")
+    axios.get("http://localhost:8001/Informations")
       .then((res) => setInformations(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = (id) => {
-    axios
-      .delete("http://localhost:8001/DeleteInformasiAdmin/" + id)
+    axios.delete("http://localhost:8001/DeleteInformasiAdmin/" + id)
       .then((res) => window.location.reload(res))
       .catch((err) => console.log(err));
   };

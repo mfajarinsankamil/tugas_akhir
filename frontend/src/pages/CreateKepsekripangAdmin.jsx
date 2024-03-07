@@ -18,8 +18,7 @@ const CreateKepsekripangAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:8001/CreateKepsekripangAdmin", values)
+    axios.post("http://localhost:8001/CreateKepsekripangAdmin", values)
       .then((res) => navigate("/KepsekAdm", res))
       .catch((err) => console.log(err));
   };

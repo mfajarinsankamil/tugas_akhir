@@ -24,32 +24,28 @@ import FooterComp from "../components/FooterComp";
 const Sekolah = () => {
   const [sekolahs, setSekolahs] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Sekolah")
+    axios.get("http://localhost:8001/Sekolah")
       .then((res) => setSekolahs(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const [visis, setVisis] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Visi")
+    axios.get("http://localhost:8001/Visi")
       .then((res) => setVisis(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const [misis, setMisis] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Misi")
+    axios.get("http://localhost:8001/Misi")
       .then((res) => setMisis(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const [tujuans, setTujuans] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Tujuan")
+    axios.get("http://localhost:8001/Tujuan")
       .then((res) => setTujuans(res.data))
       .catch((err) => console.log(err));
   }, []);

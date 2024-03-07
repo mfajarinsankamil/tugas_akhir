@@ -26,14 +26,12 @@ const UpdateKepsekidenAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .put("http://localhost:8001/UpdateKepsekidenAdmin/" + id, values)
+    axios.put("http://localhost:8001/UpdateKepsekidenAdmin/" + id, values)
       .then((res) => navigate("/KepsekAdm", res))
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordKepsekidenAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordKepsekidenAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

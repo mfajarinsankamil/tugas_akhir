@@ -19,14 +19,12 @@ const UpdateSarpasAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .put("http://localhost:8001/UpdateSarpasAdmin/" + id, values)
+    axios.put("http://localhost:8001/UpdateSarpasAdmin/" + id, values)
       .then((res) => navigate("/SekolahAdm", res))
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordSarpasAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordSarpasAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

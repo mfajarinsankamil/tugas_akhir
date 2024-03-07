@@ -18,8 +18,7 @@ import FooterComp from "../components/FooterComp";
 const Guru = () => {
   const [gurus, setGurus] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Guru")
+    axios.get("http://localhost:8001/Guru")
       .then((res) => setGurus(res.data))
       .catch((err) => console.log(err));
   }, []);

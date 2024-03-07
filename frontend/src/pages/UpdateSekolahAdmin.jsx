@@ -32,14 +32,12 @@ const UpdateSekolahAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .put("http://localhost:8001/UpdateSekolahAdmin/" + id, values)
+    axios.put("http://localhost:8001/UpdateSekolahAdmin/" + id, values)
       .then((res) => navigate("/SekolahAdm", res))
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordSekolahAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordSekolahAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

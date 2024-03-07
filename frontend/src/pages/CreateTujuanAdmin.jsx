@@ -16,8 +16,7 @@ const CreateTujuanAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:8001/CreateTujuanAdmin", values)
+    axios.post("http://localhost:8001/CreateTujuanAdmin", values)
       .then((res) => navigate("/SekolahAdm", res))
       .catch((err) => console.log(err));
   };

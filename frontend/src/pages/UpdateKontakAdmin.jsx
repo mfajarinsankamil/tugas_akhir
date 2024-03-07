@@ -19,14 +19,12 @@ const UpdateKontakAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .put("http://localhost:8001/UpdateKontakAdmin/" + id, values)
+    axios.put("http://localhost:8001/UpdateKontakAdmin/" + id, values)
       .then((res) => navigate("/KontakAdm", res))
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordKontakAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordKontakAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

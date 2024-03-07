@@ -34,8 +34,7 @@ const UpdatePesdikAdmin = () => {
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordPesdikAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordPesdikAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

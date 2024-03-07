@@ -18,8 +18,7 @@ const CreateSarpasAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:8001/CreateSarpasAdmin", values)
+    axios.post("http://localhost:8001/CreateSarpasAdmin", values)
       .then((res) => navigate("/SekolahAdm", res))
       .catch((err) => console.log(err));
   };

@@ -34,14 +34,12 @@ const UpdateGuruAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .put("http://localhost:8001/UpdateGuruAdmin/" + id, values)
+    axios.put("http://localhost:8001/UpdateGuruAdmin/" + id, values)
       .then((res) => navigate("/GuruAdm", res))
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordGuruAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordGuruAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

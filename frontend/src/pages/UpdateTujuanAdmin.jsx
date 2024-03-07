@@ -23,8 +23,7 @@ const UpdateTujuanAdmin = () => {
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordTujuanAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordTujuanAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

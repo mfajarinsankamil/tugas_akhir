@@ -19,8 +19,7 @@ import FaqComp from "../components/FaqComp";
 const Informasi = () => {
   const [informations, setInformations] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Informations")
+    axios.get("http://localhost:8001/Informations")
       .then((res) => setInformations(res.data))
       .catch((err) => console.log(err));
   }, []);

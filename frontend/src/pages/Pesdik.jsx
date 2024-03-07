@@ -11,8 +11,7 @@ import FaqComp from "../components/FaqComp";
 const Pesdik = () => {
   const [pesdiks, setPesdiks] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Pesdik")
+    axios.get("http://localhost:8001/Pesdik")
       .then((res) => setPesdiks(res.data))
       .catch((err) => console.log(err));
   }, []);

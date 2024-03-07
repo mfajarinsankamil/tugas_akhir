@@ -1,11 +1,11 @@
-import express from "express";
-import mysql from "mysql";
-import cors from "cors";
+import express from 'express';
+import mysql from 'mysql';
+import cors from 'cors';
+// import mysql from "mysql";
 import cookieParser from "cookie-parser";
-import dotenv from "dotenv";
-// import jwt from "jsonwebtoken";
 
 const app = express();
+const port = 8001;
 app.use(express.json());
 app.use(cookieParser());
 app.use(
@@ -18,13 +18,15 @@ app.use(
 
 const db = mysql.createConnection({
   host: "localhost",
-  user: "root",
+  user: "user",
   password: "",
   database: "db_sekolah",
-  dateStrings: "date",
 });
 
-// verifyUser,
+app.get('/', (req,res)=> {
+  res.send('Anda berada di dapur TK Islam Al-manaar')
+})
+
 app.get("/BerandaAdmin", (req, res) => {
   return res.json({ Status: "Success", name: req.name });
 });
@@ -863,6 +865,6 @@ app.get("/GetRecordKontakAdmin/:id", (req, res) => {
 
 // =========================Pesdik Admin=========================
 
-app.listen(8001, () => {
-  console.log("Running");
+app.listen(port, () => {
+  console.log(`backend sudah berjalan di port : ${port}`);
 });

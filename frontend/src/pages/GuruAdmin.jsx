@@ -20,15 +20,13 @@ import FooterCompAdmin from "../components/FooterCompAdmin";
 const GuruAdmin = () => {
   const [gurus, setGurus] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Guru")
+    axios.get("http://localhost:8001/Guru")
       .then((res) => setGurus(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = (id) => {
-    axios
-      .delete("http://localhost:8001/DeleteGuruAdmin/" + id)
+    axios.delete("http://localhost:8001/DeleteGuruAdmin/" + id)
       .then((res) => window.location.reload(res))
       .catch((err) => console.log(err));
   };

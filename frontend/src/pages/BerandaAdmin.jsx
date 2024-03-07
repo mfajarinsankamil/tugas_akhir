@@ -28,8 +28,7 @@ function Beranda() {
 
   const navigate = useNavigate();
   const handleLogout = () => {
-    axios
-      .get("http://localhost:8001/Logout")
+    axios.get("http://localhost:8001/Logout")
       .then((res) => {
         if (res.data.Status === "Success") {
           navigate("/LoginToAdmin");

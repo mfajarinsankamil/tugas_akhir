@@ -25,24 +25,21 @@ import FooterComp from "../components/FooterComp";
 const KepalaSekolah = () => {
   const [kepsekidents, setKepsekidents] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/KepsekIdentitas")
+    axios.get("http://localhost:8001/KepsekIdentitas")
       .then((res) => setKepsekidents(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const [kepsekripens, setKepsekripens] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/KepsekRipen")
+    axios.get("http://localhost:8001/KepsekRipen")
       .then((res) => setKepsekripens(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const [kepsekripangs, setKepsekripangs] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/KepsekRipang")
+    axios.get("http://localhost:8001/KepsekRipang")
       .then((res) => setKepsekripangs(res.data))
       .catch((err) => console.log(err));
   }, []);

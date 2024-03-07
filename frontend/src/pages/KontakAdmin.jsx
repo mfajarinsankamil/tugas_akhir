@@ -12,8 +12,7 @@ import { EditIcon, PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 const KontakAdmin = () => {
   const [kontaks, setKontaks] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Kontak")
+    axios.get("http://localhost:8001/Kontak")
       .then((res) => setKontaks(res.data))
       .catch((err) => console.log(err));
   }, []);

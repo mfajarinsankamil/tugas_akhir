@@ -17,14 +17,12 @@ const UpdateInformasiAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .put("http://localhost:8001/UpdateInformasiAdmin/" + id, values)
+    axios.put("http://localhost:8001/UpdateInformasiAdmin/" + id, values)
       .then((res) => navigate("/InformasiAdm", res))
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordInformasiAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordInformasiAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

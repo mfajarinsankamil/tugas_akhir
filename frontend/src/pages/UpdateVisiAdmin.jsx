@@ -23,8 +23,7 @@ const UpdateVisiAdmin = () => {
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/GetRecordVisiAdmin/" + id)
+    axios.get("http://localhost:8001/GetRecordVisiAdmin/" + id)
       .then((res) => {
         setValues({
           ...values,

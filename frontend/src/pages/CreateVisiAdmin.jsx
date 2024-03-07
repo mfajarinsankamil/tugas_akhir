@@ -16,8 +16,7 @@ const CreateVisiAdmin = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:8001/CreateVisiAdmin", values)
+    axios.post("http://localhost:8001/CreateVisiAdmin", values)
       .then((res) => navigate("/SekolahAdm", res))
       .catch((err) => console.log(err));
   };

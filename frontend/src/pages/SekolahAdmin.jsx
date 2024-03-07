@@ -26,53 +26,46 @@ import NavbarCompAdmin from "../components/NavCompAdmin";
 const SekolahAdmin = () => {
   const [sekolahs, setSekolahs] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Sekolah")
+    axios.get("http://localhost:8001/Sekolah")
       .then((res) => setSekolahs(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const [visis, setVisis] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Visi")
+    axios.get("http://localhost:8001/Visi")
       .then((res) => setVisis(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = (id) => {
-    axios
-      .delete("http://localhost:8001/DeleteVisiAdmin/" + id)
+    axios.delete("http://localhost:8001/DeleteVisiAdmin/" + id)
       .then((res) => window.location.reload(res))
       .catch((err) => console.log(err));
   };
 
   const [misis, setMisis] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Misi")
+    axios.get("http://localhost:8001/Misi")
       .then((res) => setMisis(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDeletes = (id) => {
-    axios
-      .delete("http://localhost:8001/DeleteMisiAdmin/" + id)
+    axios.delete("http://localhost:8001/DeleteMisiAdmin/" + id)
       .then((res) => window.location.reload(res))
       .catch((err) => console.log(err));
   };
 
   const [tujuans, setTujuans] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Tujuan")
+    axios.get("http://localhost:8001/Tujuan")
       .then((res) => setTujuans(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDeletess = (id) => {
-    axios
-      .delete("http://localhost:8001/DeleteTujuanAdmin/" + id)
+    axios.delete("http://localhost:8001/DeleteTujuanAdmin/" + id)
       .then((res) => window.location.reload(res))
       .catch((err) => console.log(err));
   };

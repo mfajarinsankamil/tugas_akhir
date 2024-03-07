@@ -11,8 +11,7 @@ import FooterComp from "../components/FooterComp";
 const Kontak = () => {
   const [kontaks, setKontaks] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://localhost:8001/Kontak")
+    axios.get("http://localhost:8001/Kontak")
       .then((res) => setKontaks(res.data))
       .catch((err) => console.log(err));
   }, []);
